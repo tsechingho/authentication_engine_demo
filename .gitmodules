@@ -1,0 +1,9 @@
+[submodule "vendor/plugins/authentication_engine"]
+	path = vendor/plugins/authentication_engine
+	url = git://github.com/angantyr/authentication_engine.git
+[submodule "vendor/plugins/open_id_authentication"]
+	path = vendor/plugins/open_id_authentication
+	url = git://github.com/rails/open_id_authentication.git
+[submodule "vendor/plugins/i18n_label"]
+	path = vendor/plugins/i18n_label
+	url = git://github.com/iain/i18n_label.git

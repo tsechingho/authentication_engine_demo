@@ -14,9 +14,10 @@ class CreateRoles < ActiveRecord::Migration
 
     Role.find_or_create_by_name(:name => 'member', :title => 'Member')
     Role.find_or_create_by_name(:name => 'author', :title => 'Author')
+    Role.find_or_create_by_name(:name => 'reviewer', :title => 'Reviewer')
     Role.find_or_create_by_name(:name => 'manager', :title => 'Manager')
     Role.find_or_create_by_name(:name => 'admin', :title => 'Administrator')
-    puts "Roles (member, author, manager, admin) created."
+    puts "Roles (member, author, reviewer, manager, admin) created."
 
 
     unless User.find_by_login('root')

@@ -1,0 +1,30 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>State</th>
+    <th>Author</th>
+  </tr>
+<% @articles.each do |article| %>
+  <tr>
+    <td><%=h article.title %></td>
+    <td><%=h article.content %></td>
+    <td><%=h article.state %></td>
+    <td><%=h article.author.name %></td>
+    <td>
+      <%= link_to 'Show', article %>
+      <%= link_to 'Edit', edit_article_path(article) if permitted_to?(:edit, article) %>
+      <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete if permitted_to?(:delete, article) %>
+      <%= link_to 'Confirm', confirm_article_path(article), :method => :put if article.can_confirm? && permitted_to?(:confirm, article) %>
+      <%= link_to 'Approve', approve_article_path(article), :method => :put if article.can_approve? && permitted_to?(:approve, article) %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% permitted_to? :create, :articles do %>
+<%= link_to 'New article', new_article_path %>
+<% end %>

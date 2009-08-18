@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :articles, :member => {:confirm => :put, :approve => :put}
+
   map.root :controller => "home", :action => "index"
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,26 @@
+<p>
+  <b>Title:</b>
+  <%=h @article.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @article.content %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @article.state %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @article.author.name %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_article_path(@article) + " | " if permitted_to?(:edit, @article) %>
+  <%= link_to 'Confirm', confirm_article_path(@article), :method => :put if @article.can_confirm? && permitted_to?(:confirm, @article) %>
+  <%= link_to 'Approve', approve_article_path(@article), :method => :put if @article.can_approve? && permitted_to?(:approve, @article) %>
+  <%= link_to 'Back', articles_path %>
+</p>

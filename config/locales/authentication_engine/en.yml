@@ -35,6 +35,7 @@ en:
         current_login_at: "Current login at"
         last_login_ip: "Last login IP"
         current_login_ip: "Current login IP"
+        roles: "Roles"
       invitation:
         sender_id: "Sender"
         recipient_name: "Friend's full name"

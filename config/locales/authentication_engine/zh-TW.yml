@@ -35,6 +35,7 @@
         current_login_at: "目前登入時間"
         last_login_ip: "上次登入位址"
         current_login_ip: "目前登入位址"
+        roles: "角色"
       invitation:
         sender_id: "邀請者"
         recipient_name: "朋友的全名"

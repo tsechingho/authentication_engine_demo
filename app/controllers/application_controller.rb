@@ -9,4 +9,16 @@ class ApplicationController < ActionController::Base
 
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+
+  # You must add rules first then invoke :merge_authorization_rules by before_filter
+  add_authorization_rules "#{RAILS_ROOT}/config/authorization_rules.rb"
+  add_authorization_rules "#{RAILS_ROOT}/config/article_authorization_rules.rb"
+  #add_authorization_rules %{
+  #  authorization do
+  #    role :test_role, :title => 'Test Role' do
+  #      description "Test Role Description"
+  #    end
+  #  end
+  #}
+  before_filter :merge_authorization_rules
 end

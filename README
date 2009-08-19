@@ -3,6 +3,7 @@ We will try to show you:
 1) basic use case of authentication engine
 2) basic use case of declarative authorization
 3) basic use case of state machine
+4) how to set up multiple authorization rules.
 
 You can login as:
   login / password / roles

@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   def find_current_department
     redirect_to root_url unless current_subdomain
     @current_department = Department.find_by_subdomain(current_subdomain)
-    self.class.layout(@current_department.layout_name || 'application')
+    self.class.layout(@current_department ? @current_department.layout_name : 'application')
   rescue ActiveRecord::RecordNotFound
     flash[:error] = "No such department"
     redirect_to root_url

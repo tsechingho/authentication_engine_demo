@@ -1,12 +1,21 @@
 This is a demo application for authentication_engine.
+
 We will try to show you:
 1) basic use case of authentication engine
 2) basic use case of declarative authorization
 3) basic use case of state machine
-4) how to set up multiple authorization rules.
+4) how to set up multiple authorization rules
+5) basic use case of subdomain-fu and dynamic layout
 
 You can login as:
   login / password / roles
 1) root / root / member, admin
 2) tony / tony / member, author
 3) jacky / jacky / member, reviewer
+
+== Configuration
+
+please add following to your /etc/hosts
+
+  127.0.0.1 rd.localhost ms.localhost aa.localhost
+

@@ -2,3 +2,21 @@
   home:
     titles:
       index: "首頁"
+  
+  activerecord:
+    models:
+      article: "文章"
+      department: "部門"
+    attributes:
+      article:
+        title: "標題"
+        content: "內容"
+        state: "狀態"
+        author_id: "作者"
+        department_id: "部門"
+      department:
+        name: "名字"
+        description: "描述"
+        subdomain: "次域名"
+        layout_name: "佈局名"
+  

@@ -1,0 +1,28 @@
+<h1>Editing department</h1>
+
+<% form_for [:admin, @department] do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :subdomain %><br />
+    <%= f.text_field :subdomain %>
+  </p>
+  <p>
+    <%= f.label :layout_name %><br />
+    <%= f.text_field :layout_name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', admin_department_path(@department) %> |
+<%= link_to 'Back', admin_departments_path %>

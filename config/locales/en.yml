@@ -5,3 +5,21 @@ en:
   home:
     titles:
       index: "Home"
+  
+  activerecord:
+    models:
+      article: "Article"
+      department: "Department"
+    attributes:
+      article:
+        title: "Title"
+        content: "Content"
+        state: "State"
+        author_id: "Author"
+        department_id: "Department"
+      department:
+        name: "Name"
+        description: "Description"
+        subdomain: "Subdomain"
+        layout_name: "Layout name"
+  

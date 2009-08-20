@@ -2,6 +2,7 @@ require 'declarative_authorization/maintenance'
 
 class Article < ActiveRecord::Base
   belongs_to :author, :class_name => "User"
+  belongs_to :department
 
   include Authorization::Maintenance
   using_access_control

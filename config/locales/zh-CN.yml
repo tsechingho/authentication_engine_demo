@@ -2,3 +2,21 @@
   home:
     titles:
       index: "首页"
+  
+  activerecord:
+    models:
+      article: "帖子"
+      department: "部门"
+    attributes:
+      article:
+        title: "标题"
+        content: "内容"
+        state: "状态"
+        author_id: "作者"
+        department_id: "部门"
+      department:
+        name: "名字"
+        description: "叙述"
+        subdomain: "次域名"
+        layout_name: "布局名"
+  

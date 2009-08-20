@@ -9,13 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090819111002) do
+ActiveRecord::Schema.define(:version => 20090820151113) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.string   "state"
     t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "department_id"
+  end
+
+  create_table "departments", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "subdomain"
+    t.string   "layout_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

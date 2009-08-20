@@ -21,4 +21,16 @@ class ApplicationController < ActionController::Base
   #  end
   #}
   before_filter :merge_authorization_rules
+
+  protected
+
+  # request.subdomains != current_subdomain
+  def find_current_department
+    redirect_to root_url unless current_subdomain
+    @current_department = Department.find_by_subdomain(current_subdomain)
+    self.class.layout(@current_department.layout_name || 'application')
+  rescue ActiveRecord::RecordNotFound
+    flash[:error] = "No such department"
+    redirect_to root_url
+  end
 end

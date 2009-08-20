@@ -1,6 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  map.namespace :admin do |admin|
+    admin.resources :departments
+  end
+
   map.resources :articles, :member => {:confirm => :put, :approve => :put}
 
+  map.department_root '', :controller => 'articles', :action => "index", :conditions => { :subdomain => /.+/ }
   map.root :controller => "home", :action => "index"
 
   # The priority is based upon order of creation: first created -> highest priority.

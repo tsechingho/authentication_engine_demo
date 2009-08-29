@@ -16,6 +16,7 @@ en:
       role: "Role"
       user: "User"
       invitation: "Invitation"
+      preference: "Preference"
     
     attributes:
       role:
@@ -43,6 +44,9 @@ en:
         applicant_name: "Applicant's full name"
         applicant_email: "Applicant's email address"
         sent_at: "Sent at"
+      preference:
+        language: "Language"
+        time_zone: "Time zone"
     
   
   common:
@@ -197,6 +201,7 @@ en:
     signup_by_password: "Create by a username and password"
     invitations_limit: "({{count}} left)"
     admin_pannel: "Admin Pannel"
+    preference: "Preference"
   
   admin:
     users:

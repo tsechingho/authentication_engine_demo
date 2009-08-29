@@ -16,6 +16,7 @@
       role: "角色"
       user: "使用者"
       invitation: "邀請"
+      preference: "偏好設定"
     
     attributes:
       role:
@@ -43,6 +44,9 @@
         applicant_name: "申請者的全名"
         applicant_email: "申請者的電子郵件"
         sent_at: "發送於"
+      preference:
+        language: "語言"
+        time_zone: "時區"
     
   
   common:
@@ -196,6 +200,7 @@
     signup_by_password: "使用帳號和密碼註冊"
     invitations_limit: "（剩下 {{count}} 個）"
     admin_pannel: "管理面板"
+    preference: "偏好設定"
   
   admin:
     users:
